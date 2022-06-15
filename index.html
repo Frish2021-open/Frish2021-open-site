@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+			<script type="text/javascript">  
+var userAgent = navigator.userAgent.toLowerCase();
+    var platform;
+    if(userAgent == null || userAgent == ''){
+        platform = 'WEB' ; 
+    }else{
+        if(userAgent.indexOf("android") != -1 ){ 
+            platform = 'ANDROID';
+            location.href = "./phone.html";
+        }else if(userAgent.indexOf("ios") != -1 || userAgent.indexOf("iphone") != -1 || userAgent.indexOf("ipad") != -1){ 
+            platform = 'IOS';
+            location.href = "./phone.html";
+        }else if(userAgent.indexOf("windows phone") != -1 ){ 
+            platform = 'WP';
+            location.href = "./phone.html";
+        }else{
+            platform = 'WEB' ;
+            location.href = "./pc.html";
+        }
+    }
+		</script>
+	</body>
+</html>

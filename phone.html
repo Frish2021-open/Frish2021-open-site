@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var type = navigator.appName;
+			if (type == "Netscape"){
+				var lang = navigator.language;//获取浏览器配置语言，支持非IE浏览器
+			}else{
+				var lang = navigator.userLanguage;//获取浏览器配置语言，支持IE5+ == navigator.systemLanguage
+			};
+			var lang = lang.substr(0, 2);//获取浏览器配置语言前两位
+			if (lang == "zh"){
+			    window.location.replace('./Lang/CN-zh/index.html');//中文编码时打开链接
+			}else if (lang == "en"){
+			    window.location.replace('./Lang/EN-us/index.html');
+			}else if (lang == "ja"){
+				window.location.replace('./Lang/jp-jp/index.html');
+			}else if (lang == "ru"){
+				window.location.replace('./Lang/RU-ru/index.html');
+			}else if (lang == "ko"){
+				window.location.replace('./Lang/KR-kr/index.html');
+			}else{
+			    window.location.replace('./Lang/EN-us/index.html');
+			};
+			</script>
+	</body>
+</html>
